@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dogs</title>
+</head>
+<style>
+    body {
+        background-image: url(https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/331/original/cute_paws.jpg?1674603426);
+        margin: 30px auto;
+    }
+
+    div {
+        display: block;
+        text-align: center;
+        background: linear-gradient(to top, #f6c0ff 0%, #d66eff);
+        margin: 15px 20%;
+        padding: 15px 30px;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        color: white;
+        border-radius: 30px;
+
+    }
+
+    h1 {
+        font-size: 40px;
+    }
+
+    img {
+        margin: 0px auto;
+        max-width: 35%;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgb(131, 131, 131);
+    }
+
+    h2 {
+        font-size: 30px;
+    }
+
+    p {
+        font-size: large;
+        text-align: justify;
+    }
+
+    .wikipediaLink {
+        font-size: small;
+    }
+
+    h3 {
+        font-size: 25px;
+    }
+
+    li {
+        text-align: justify;
+        line-height: 30px;
+    }
+
+    .funFacts {
+        font-size: small;
+    }
+
+    .question {
+        font-weight: bold;
+        font-size: large;
+    }
+
+    button {
+        margin: 15px auto 15px auto;
+        padding: 20px 20px 20px 20px;
+        color: #d66eff;
+        background: white;
+        font-size: larger;
+        font-weight: bold;
+        border: 2px solid #af4cd6;
+        border-radius: 20px;
+        box-shadow: 0px 2px 5px 3px rgba(0, 0, 0, 0.2);
+    }
+
+    button:hover {
+        color: #f5f0fe;
+        background: #af4cd6;
+        transition: all 200ms ease-in-out;
+        cursor: pointer;
+    }
+</style>
+
+<body>
+    <div>
+        <h1>
+            Dogs Are Our Best Friends!
+        </h1>
+        <hr />
+        <h2>
+            These are my dogs Coco and Rocky
+        </h2>
+        <img src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/064/486/original/Rocky___Coco.jpg?1674686975"
+            alt="My Dogs">
+        <h3>
+            <em>Did you know...</em>
+        </h3>
+        <p>
+            <strong>A Dog</strong> is a domesticated descendant of the wolf. Also called the domestic dog, it is derived
+            from the
+            extinct <em>Pleistocene wolf</em>. Dogs were the first species to be domesticated by hunter-gatherers over
+            <strong>15,000 years ago</strong> before the development of agriculture.
+            <span class="wikipediaLink">
+                Learn more at
+                <a href="https://en.wikipedia.org/wiki/Dog" target="_blank">
+                    Wikipedia
+                </a>
+            </span>
+        </p>
+        <h3>
+            Fun Facts about Dogs
+        </h3>
+        <ul>
+            <li>
+                The dog's sense of smell is so strong that they can detect diseases.
+            </li>
+            <li>
+                Their eyes take in information 25% faster than humans.
+            </li>
+            <li>
+                Their tale will tell you their mood.
+            </li>
+        </ul>
+        <span class="funFacts">
+            More fun facts
+            <a href="https://www.vanecovillage.com/single-post/2018/03/27/Amazing-Facts-about-Dogs?gclid=CjwKCAiAoL6eBhA3EiwAXDom5kq_VnYX0-pA7ZVJ1EISQv93L5fWYaBTXB96Ynr8poFggQ4OcK4SJRoCVdcQAvD_BwE"
+                target="_blank">
+                here
+        </span>
+
+        </a>
+        <hr />
+        <br />
+        <div class="question">
+            Would you like to have a furry companion?
+        </div>
+        <button>
+            Adopt one now 🐶
+        </button>
+    </div>
+    <script>
+        function adoptNow() {
+            let name = prompt("What is yout name?");
+            let age = prompt("How old are you?");
+
+            if (age < 18) {
+                alert("Sorry " + name + "!" + " you can't adopt a dog ☹️, but you sure can when you turn 18 😁");
+            } else {
+                let email = prompt("What is your email-address");
+                alert("Thank you " + name + "!" + " We'll be in touch through your email-address " + email);
+            }
+        }
+        let adoptButton = document.querySelector("button");
+        adoptButton.addEventListener("click", adoptNow);
+    </script>
+</body>
+
+</html>
